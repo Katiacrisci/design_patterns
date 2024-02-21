@@ -18,6 +18,7 @@ public class Subsection implements HasPages {
 
     @Override
     public void print() {
+        pages.forEach(Page::print);
 
     }
 }

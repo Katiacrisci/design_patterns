@@ -13,11 +13,12 @@ public class Book implements HasPages{
 
     @Override
     public Integer getPages() {
-        return 0;
+        return sections.stream().map(Section::getPages).reduce(0, Integer::sum);
     }
 
     @Override
     public void print() {
+        sections.forEach(Section::print);
 
     }
 }
